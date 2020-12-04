@@ -1,27 +1,35 @@
+# Clonar repositorio
+
+para clonar el repositorio es necesario ejecutar el comando 
+``` shell
+ git clone `https://github.com/jose2095/test-bankapp-endcom.git
+ ```
+
+  # Instalación de dependencias
+  una vez clonado el repositorio será moverse al directorio `
+  cd test-bankapp-endcom` una vez dentro de el, lo siguiente será instalar las dependencias, para lo cual debe ejecutar el comando 
+  `npm install
+  ` 
+  
+
 # Test BankApp EndCom
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
+  
 
-## Development server
+Proyecto generado con [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  
 
-## Code scaffolding
+## Servidor de desarrollo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+  
+
+ejecutar `ng serve` para correr el servidor de prueba. Navegar a `http://localhost:4200/`. la aplicación se recargará de forma automatica detectar cambios en algun archivo del proyecto.
+
+  
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+  
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Ejecutar `ng build` para construir el proyecto. Tel proyecto compilado sera almacenado en el directorio `dist/`. Usar `--prod` para generar proyecto de producción.
