@@ -1,0 +1,19 @@
+<div class="card" [style]="status ? 'background-color: #08bd92' : 'background-color: #a2e2d2'">
+    <div class="card-header">
+        <span *ngIf="status">Activa</span>
+        <span *ngIf="!status">Desactivada</span>
+        <span>$1,00000</span>
+    </div>
+    <div class="card-details" id='card-number'>
+        1234 - 1234 - 1234 - 1234
+    </div>
+    <div class="card-details">
+        {{nombre}}
+    </div>
+    <div class="card-details">
+        Tutor
+    </div>
+    <div id='logo'>
+        <img width="50" height="25" src="https://logos-marcas.com/wp-content/uploads/2020/09/Mastercard-Logo.png" alt="">
+    </div>
+</div>

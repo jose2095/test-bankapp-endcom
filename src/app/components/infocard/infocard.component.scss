@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    width: 15rem;
+    background-color: white;
+    padding: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    align-items: center;
+    border-radius: 5px;
+    margin-left: 20px;
+
+
+}
+
+.descripcion
+{
+    width: 45%;
+
+    span{
+        text-transform: uppercase;
+        text-align: justify;
+        text-justify: inter-word;
+        color: #79bedd;
+        font-size: 11px;
+        font-weight: 1000;
+        
+    }
+
+
+}
+
+.cantidad{
+        color: #bbc0c3;
+    }

@@ -1,0 +1,21 @@
+#table{
+    margin-left: 50px;
+    border-collapse: collapse;
+    width: 90%;
+    margin-top: 20px;
+    background-color: white;
+td,th {
+        border-bottom: 3px solid #F5F5F5;
+        padding: 8px;
+        text-align: left;
+        color: #99A3A4;
+      }
+
+      th{  
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: white;
+    color: #99A3A4;
+      }
+}

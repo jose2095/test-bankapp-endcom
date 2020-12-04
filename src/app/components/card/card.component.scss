@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Open+Sans&display=swap');
+
+
+.card{
+    
+    margin-left: 30px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 50px;
+    border-radius: 5px;
+    color: white;
+    width: auto;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.card-details{
+    margin-bottom: 5px;
+}
+
+#logo{
+    text-align: right;
+}
+
+#card-number{
+    font-family: 'Inconsolata', monospace;
+
+}

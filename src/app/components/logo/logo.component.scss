@@ -1,0 +1,15 @@
+.circle{
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    float: left;
+    margin-right: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    span{
+        font-weight: bold;
+    }
+}
