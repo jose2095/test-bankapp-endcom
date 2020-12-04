@@ -6,9 +6,9 @@
       <th style="text-align: center;">Monto</th>
     </tr>
    
-    <tr *ngFor="let item of [1,2,4,5,7,8,9]">
-        <td style="width: 150px;">2020-10-02</td>
-        <td style="width: 500px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </td>
-        <td style="text-align: center; font-weight: bold;">$200</td>
+    <tr *ngFor="let movimiento of movimientos">
+        <td style="width: 150px;">{{movimiento.fecha}}</td>
+        <td style="width: 500px;">{{movimiento.descripcion}}</td>
+        <td [style]="movimiento.tipo=='abono' ? 'color: green': 'color:red'" style="text-align: center; font-weight: bold;">{{movimiento.monto| currency}}</td>
     </tr>
   </table>

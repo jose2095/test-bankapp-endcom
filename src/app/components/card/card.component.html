@@ -1,17 +1,16 @@
-<div class="card" [style]="status ? 'background-color: #08bd92' : 'background-color: #a2e2d2'">
+<div class="card" [style]="tarjeta?.estado=='activa' ? 'background-color: #08bd92' : 'background-color: #a2e2d2'">
     <div class="card-header">
-        <span *ngIf="status">Activa</span>
-        <span *ngIf="!status">Desactivada</span>
-        <span>$1,00000</span>
+        <span>{{tarjeta?.estado}}</span>
+        <span>{{tarjeta?.saldo |currency}}</span>
     </div>
     <div class="card-details" id='card-number'>
-        1234 - 1234 - 1234 - 1234
+        {{tarjeta?.tarjeta | card}}
     </div>
     <div class="card-details">
-        {{nombre}}
+        {{tarjeta?.nombre}}
     </div>
     <div class="card-details">
-        Tutor
+        {{tarjeta?.tipo}}
     </div>
     <div id='logo'>
         <img width="50" height="25" src="https://logos-marcas.com/wp-content/uploads/2020/09/Mastercard-Logo.png" alt="">

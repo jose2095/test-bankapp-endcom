@@ -12,7 +12,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LogoComponent } from './components/logo/logo.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ModalComponent } from './components/modal/modal.component';
-
+import { HttpClientModule} from '@angular/common/http';
+import { CardPipe } from './pipes/card.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +24,14 @@ import { ModalComponent } from './components/modal/modal.component';
     FooterComponent,
     LogoComponent,
     NavbarComponent,
-    ModalComponent
+    ModalComponent,
+    CardPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

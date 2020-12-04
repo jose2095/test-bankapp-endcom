@@ -1,14 +1,15 @@
+<app-navbar [nombre]="cuenta?.nombre" [sesion]="cuenta?.ultimaSesion"></app-navbar>
+
 <div class="subheader">
-    <app-infocard color=true saldo="$2000.00" titulo="saldo general de cuentas"></app-infocard>
-    <app-infocard saldo="$2000.00" titulo="total de ingresos"></app-infocard>
-    <app-infocard saldo="$2000.00" titulo="Total de gastos"></app-infocard>
+    <app-infocard color=true [saldo]="saldos?.saldoGeneral |currency" titulo="saldo general de cuentas"></app-infocard>
+    <app-infocard [saldo]="saldos?.ingresos | currency" titulo="total de ingresos"></app-infocard>
+    <app-infocard [saldo]="saldos?.saldoGeneral |currency" titulo="Total de gastos"></app-infocard>
 </div>
 
 <div class="main-container">
     <div class="detail-acount">
         <span class="titulo">Mis Cuentas</span>
-        <app-card status='true' nombre="Berenice Garcia Lopez"></app-card>
-        <app-card nombre="Lilly Silva Martinez"></app-card>
+        <app-card *ngFor="let card of tarjetas" [tarjeta]="card"></app-card>
         <div class="add-card">
             <span>
                 Agrgar tarjeta
@@ -20,9 +21,9 @@
 
     <div class="movements">
         <span class="titulo">Movimientos</span>
-        <app-tabla></app-tabla>
+        <app-tabla [movimientos]="movimientos"></app-tabla>
     </div>
 
 </div>
 
-<app-modal></app-modal>
+<app-modal hidden></app-modal>

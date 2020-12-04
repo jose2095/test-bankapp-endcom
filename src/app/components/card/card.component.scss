@@ -16,10 +16,14 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    span{
+        text-transform: capitalize;
+    }
 }
 
 .card-details{
     margin-bottom: 5px;
+    text-transform: capitalize;
 }
 
 #logo{

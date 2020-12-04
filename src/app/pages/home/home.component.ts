@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { BankappService} from 'src/app/services/bankapp.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -7,8 +7,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  saldos:any;
+  cuenta:any;
+  tarjetas:any;
+  movimientos:any;
+  constructor(private bankserv:BankappService) { }
 
   ngOnInit(): void {
+    this.getSaldos();
+    this.getUsuario();
+    this.getTarjetas();
+    this.getMovientos();
+  }
+
+  private getSaldos(){
+    this.bankserv.getSaldos().subscribe(res=>{
+      this.saldos = res.saldos[0];
+    })
+  }
+
+  private getUsuario(){
+    this.bankserv.getCuenta().subscribe(res=>{
+      this.cuenta= res.cuenta[0];
+    })
+  }
+
+  private getTarjetas(){
+    this.bankserv.getTarjetas().subscribe(res=>{
+      this.tarjetas = res.tarjetas;
+    })
+  }
+
+  private getMovientos(){
+    this.bankserv.getMovimientos().subscribe(res=>{
+      this.movimientos = res.movimientos;
+    })
   }
 }
