@@ -1,0 +1,24 @@
+<div style="position: static; height: 100%; overflow: hidden; display: block;">
+
+    <div id="modalcontainer" class="modalContainer" style="display: block;">
+        <div class="modal-content" style="height: auto;">
+            <div class="header">
+                <app-logo header=true></app-logo>
+                <span>Tarjeta Agregada</span>
+            </div>
+            <div>
+                <pre>
+                    {{datos | json}}
+                </pre>
+            </div>
+            <div class="footer">
+                    <button class="crear" (click)="close()">Aceptar</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</div>

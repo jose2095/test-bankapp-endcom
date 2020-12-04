@@ -7,39 +7,39 @@
                 <span>Agregar Tarjeta</span>
             </div>
 
-            <div class="body">
+            <div class="body" [formGroup]="tarjetaForm">
                 <div class="form-g">
-                    <input  class="formulario" type="text" placeholder="Número de Tarjeta">
+                    <input [class]="tarjetaForm.get('numeroTarjeta').invalid ? 'invalidform': 'validform'" required formControlName="numeroTarjeta" class="formulario" type="number" placeholder="Número de Tarjeta">
                 </div>
 
                 <div class="form-g">
-                    <input class="campos" placeholder="Cuenta" type="text" name="" id="">
-                    <input placeholder="Isuser" type='text' class="campos">
+                    <input [class]="tarjetaForm.get('cuenta').invalid ? 'invalidform': 'validform'" formControlName="cuenta" class="campos" placeholder="Cuenta" type="text" name="" id="">
+                    <input [class]="tarjetaForm.get('isuser').invalid ? 'invalidform': 'validform'" formControlName="isuser" placeholder="Isuser" type='text' class="campos">
                 </div>
 
                 <div class="form-g">
-                    <input  class="formulario" type="text" placeholder="Nombre de Tarjeta">
+                    <input [class]="tarjetaForm.get('nombreTarjeta').invalid ? 'invalidform': 'validform'" formControlName="nombreTarjeta" class="formulario" type="text" placeholder="Nombre de Tarjeta">
                 </div>
 
                 <div class="form-g">
-                    <input  class="formulario" type="text" placeholder="Marca">
+                    <input [class]="tarjetaForm.get('marca').invalid ? 'invalidform': 'validform'" formControlName="marca" class="formulario" type="text" placeholder="Marca">
                 </div>
 
                 <div class="form-g">
-                    <input  class="formulario" type="text" placeholder="Status">
+                    <input [class]="tarjetaForm.get('status').invalid ? 'invalidform': 'validform'" formControlName="status" class="formulario" type="text" placeholder="Status">
                 </div>
 
                 <div class="form-g">
-                    <input  class="formulario" type="text" placeholder="Saldo">
+                    <input [class]="tarjetaForm.get('saldo').invalid ? 'invalidform': 'validform'" formControlName="saldo" class="formulario" type="number" placeholder="Saldo">
                 </div>
 
                 <div class="form-g">
-                    <input  class="formulario" type="text" placeholder="Tipo de Cuenta">
+                    <input [class]="tarjetaForm.get('tipoCuenta').invalid ? 'invalidform': 'validform'" formControlName = "tipoCuenta" class="formulario" type="text" placeholder="Tipo de Cuenta">
                 </div>
             </div>
             <div class="footer">
-                    <button class="cancelar">Cancelar</button>
-                    <button class="crear">Agregar Tarjeta</button>
+                    <button (click)="close()" class="cancelar">Cancelar</button>
+                    <button [disabled]="tarjetaForm.invalid" (click)="guardar()" class="crear">Agregar Tarjeta</button>
             </div>
         </div>
 
@@ -49,3 +49,5 @@
 
 
 </div>
+
+<app-alert [datos]="datos" [hidden]="!showalert" (cerrar)='cerrarAlert($event)'></app-alert>

@@ -10,7 +10,7 @@
     <div class="detail-acount">
         <span class="titulo">Mis Cuentas</span>
         <app-card *ngFor="let card of tarjetas" [tarjeta]="card"></app-card>
-        <div class="add-card">
+        <div class="add-card" (click)="abrirFormulario()">
             <span>
                 Agrgar tarjeta
             </span>
@@ -26,4 +26,4 @@
 
 </div>
 
-<app-modal hidden></app-modal>
+<app-modal [hidden]="!show" (cerrar)="cerrarFormulario($event)"></app-modal>

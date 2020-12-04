@@ -14,6 +14,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { HttpClientModule} from '@angular/common/http';
 import { CardPipe } from './pipes/card.pipe';
+import { AlertComponent } from './components/alert/alert.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,13 +27,16 @@ import { CardPipe } from './pipes/card.pipe';
     LogoComponent,
     NavbarComponent,
     ModalComponent,
-    CardPipe
+    CardPipe,
+    AlertComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

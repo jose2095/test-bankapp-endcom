@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
   cuenta:any;
   tarjetas:any;
   movimientos:any;
+  show:boolean=false;
   constructor(private bankserv:BankappService) { }
 
   ngOnInit(): void {
@@ -18,6 +19,15 @@ export class HomeComponent implements OnInit {
     this.getUsuario();
     this.getTarjetas();
     this.getMovientos();
+  }
+
+
+  cerrarFormulario(event){
+    this.show=event;
+  }
+
+  abrirFormulario(){
+    this.show=true;
   }
 
   private getSaldos(){
